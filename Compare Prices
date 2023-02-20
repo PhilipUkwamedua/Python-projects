@@ -1,0 +1,18 @@
+def compare_prices():
+  user_bid_price=int(input('Please input your bid price\n'))
+  #my bid price is 100 pounds
+  my_bid_price = 100
+  if (user_bid_price) == (my_bid_price):
+    print('Your bid is the same as mine')
+  elif user_bid_price < my_bid_price:
+    #To use singlar for 1pound, and plural for >=2pounds, the below condition will apply
+    if my_bid_price - user_bid_price <= 1:
+      print('Your bid is ', my_bid_price - user_bid_price, 'Pound lower than mine')
+    else:
+      print('Your bid is ', my_bid_price - user_bid_price, 'Pounds lower than mine')
+  else:
+    if user_bid_price - my_bid_price <= 1:
+      print('Your bid is ',  user_bid_price - my_bid_price, 'Pound higher than mine')
+    else:
+      print('Your bid is ', user_bid_price - my_bid_price, 'Pounds higher than mine')
+compare_prices()
